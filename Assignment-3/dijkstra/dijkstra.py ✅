@@ -1,1 +1,36 @@
+import heapq
 
+def dijkstra(graph, start):
+    distances = {city: float('inf') for city in graph}
+    distances[start] = 0
+
+    pq = [(0, start)]
+
+    while pq:
+        cost, city = heapq.heappop(pq)
+
+        if cost > distances[city]:
+            continue
+
+        for neighbor, dist in graph[city]:
+            new_cost = cost + dist
+
+            if new_cost < distances[neighbor]:
+                distances[neighbor] = new_cost
+                heapq.heappush(pq, (new_cost, neighbor))
+
+    return distances
+
+
+graph = {
+    "Delhi": [("Agra", 233), ("Jaipur", 280)],
+    "Agra": [("Delhi", 233), ("Lucknow", 335)],
+    "Jaipur": [("Delhi", 280), ("Udaipur", 400)],
+    "Lucknow": [("Agra", 335)],
+    "Udaipur": [("Jaipur", 400)]
+}
+
+result = dijkstra(graph, "Delhi")
+
+for city, dist in result.items():
+    print(f"Delhi → {city} : {dist} km")
