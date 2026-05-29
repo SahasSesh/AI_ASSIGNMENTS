@@ -1,1 +1,38 @@
+Test Case 1
 
+Input:
+City = Hyderabad
+Days = 2
+Budget = 6000
+
+Expected:
+Travel plan generated successfully.
+
+Result:
+PASS
+
+
+Test Case 2
+
+Input:
+City = Vijayawada
+Days = 1
+Budget = 2500
+
+Expected:
+Budget insufficient message displayed.
+
+Result:
+PASS
+
+
+Test Case 3
+
+Input:
+City = Chennai
+
+Expected:
+City not available in knowledge base.
+
+Result:
+PASS
