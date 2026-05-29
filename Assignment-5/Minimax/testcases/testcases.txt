@@ -1,1 +1,43 @@
+Test Case 1
 
+Board
+
+X X _
+O O _
+_ _ _
+
+Expected:
+AI places X in the third position and wins.
+
+Result:
+PASS
+
+
+Test Case 2
+
+Board
+
+X O X
+O X _
+_ O _
+
+Expected:
+AI selects the winning move.
+
+Result:
+PASS
+
+
+Test Case 3
+
+Board
+
+X O X
+X O O
+O X _
+
+Expected:
+Draw.
+
+Result:
+PASS
