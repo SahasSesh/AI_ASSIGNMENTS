@@ -1,1 +1,40 @@
+Test Case 1
 
+Board:
+X X _
+O O _
+_ _ _
+
+Expected:
+AI selects a move with the highest simulation success rate.
+
+Result:
+PASS
+
+
+Test Case 2
+
+Board:
+O O _
+X _ _
+_ _ _
+
+Expected:
+AI chooses a move based on Monte Carlo simulations.
+
+Result:
+PASS
+
+
+Test Case 3
+
+Board:
+X O X
+X O O
+O X _
+
+Expected:
+Game reaches draw state.
+
+Result:
+PASS
